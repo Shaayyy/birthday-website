@@ -1,0 +1,314 @@
+body{
+    background-image : url("images/background.jpg");
+    /*background-size: cover;
+    background-position : centre;
+    background-repeat : no-repeat; 2nd one */
+
+    /*display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;*/
+
+    /*margin: 0;             this worked 
+    overflow-x: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    overflow-x : hidden;   till here*/
+    margin: 0;
+    overflow-x: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+
+#headerImage{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#headerImage img{
+    width: 350px;
+    animation : float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{ transform: translateY(0); }
+    50%{ transform: translateY(-6px); }
+    100%{ transform: translateY(0); }
+}
+
+#Birthdaytext{
+    font-family: "Bitcount Single Ink" , sans-serif; 
+    background: rgba(255,255,255,0.6);
+    padding: 20px 40px;
+    border-radius: 12px;
+    font-size: 25px;
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+.buttons {
+    display : flex;
+    flex-direction : column;
+    gap : 10px;
+    width: 150px;
+    height: 150px;
+    padding : 10px;
+}
+.buttons button{                         /*individual button styling*/
+    width : 160px; 
+    height : 55px;
+    background-color: #FCBBD6;
+    border : none;
+    border-radius : 12px;
+    font-size : 16px;
+    font-weight : bold;
+
+    cursor : pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align : center;
+}
+
+.home-layout{    
+    width : 500px;                         /*char-buttons layout*/
+    display:grid;
+
+    grid-template-columns: 1fr 1fr;
+    align-items :center;
+    justify-items: center;
+    margin : 0 auto;
+    gap : 40px;
+    
+}
+
+
+#character img{
+    width : 180px;
+    height : auto;
+
+}
+
+#cakeStage img{
+    width: 220px;
+    height: auto;
+}
+
+#cakeStage{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    /*position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;*/
+}
+
+#cakeLayout{
+    font-family : "Bitcount Single Ink" , sans-serif; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 100px;
+    text-align : center;
+}
+
+#cakeLayout #cakeText{
+    font-family : "Bitcount Single Ink" , sans-serif; 
+    background: rgba(255,255,255,0.6);
+    padding: 20px 40px;
+    border-radius: 12px;
+    font-size: 25px;
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+.flowers{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.flowers button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #FCBBD6;
+    cursor: pointer;
+    font-weight: bold;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.flowers button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.stageContainer #stage img{
+    width: 80px;
+    height: auto;
+}
+.stageContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    background: rgba(255,255,255,0.4);
+    border-radius: 12px;
+    padding: 20px;
+    width: 450px;
+}
+.bouquetPage #stage{
+    display : grid;
+    grid-template-columns :repeat(3,80px);
+    gap : 0px;
+    column-gap : 0px;
+    row-gap: 10px;
+    width: fit-content;
+    margin: 30px auto;
+    overflow : visible;
+
+    justify-items: center;
+    /*column-gap: 2px;*/
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;*/
+}
+
+#bouquetText{
+    background: rgba(255,255,255,0.6);
+    padding: 20px 30px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    text-align : center;
+}
+
+
+
+.bouquetPage #stage image{
+    width : 80px;
+    height : auto;
+    position : relative;
+
+}
+
+.bouquetPage #stage img:nth-child(2){
+    top: -20px;
+}
+
+.bouquetPage #stage img:nth-child(4){
+    top: -25px;
+}
+
+.bouquetPage #stage img:nth-child(5){
+    top: 10px;
+}
+
+.bouquetPage #stage img:nth-child(7){
+    top: 10px;
+}
+
+.bouquetPage #stage img:nth-child(2){
+    left: -12px;
+}
+
+.bouquetPage #stage img:nth-child(6){
+    left: 12px;
+}
+.bouquetPage #stage img:nth-child(odd){
+    transform: rotate(-3deg);
+}
+
+.bouquetPage #stage img:nth-child(even){
+    transform: rotate(3deg);
+}
+
+.confetti{
+    width: 200px;
+    height: auto;
+    position : absolute;
+    pointer-events : none;
+    animation: fall 3s linear forwards;
+    
+}
+
+/*fall animation*/
+@keyframes fall {
+
+  0% {
+    transform: translateY(-50px) rotate(0deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(500px) rotate(270deg);
+    opacity: 0;
+  }
+
+}
+
+#mainLetter{
+    background-image : url("images/letterbg.jpg");
+    color : black;
+    position: relative;
+    width: 600px;
+    min-height: 450px;          /* ensures the paper area is tall enough */
+    margin: 100px auto;
+    padding: 40px;         /* pushes text away from paper edges */
+
+    background-size: contain;   /* show the whole paper */
+    background-position: center;
+    background-repeat: no-repeat;
+
+    aspect-ratio : 3/4;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+#letterPaper{
+    width: 100%;
+    display: block;
+}
+
+#mainLetter #thetext {
+    margin-top: 150px;
+    margin-left: 70px;
+    margin-right: 70px;
+    font-family:"Homemade Apple";
+}
+
+#letterStage{
+    position: relative;
+}
+
+.heart{
+    position: absolute;
+    width: 80px;
+    animation: floatUp 3s linear forwards;
+}
+
+@keyframes floatUp{
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+}
